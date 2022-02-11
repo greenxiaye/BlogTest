@@ -16,6 +16,7 @@ mongoose.connection.once('open', () => {
 })
 
 app.set('view engine', 'ejs')
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) {
     const articles = [{
